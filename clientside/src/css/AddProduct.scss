@@ -1,0 +1,157 @@
+$primary-color: #2874f0; // Flipkart blue
+$secondary-color: #ff9f00; // Flipkart orange
+$background-color: #f5f5f5; // Light background color
+$border-color: #dcdcdc; // Border color for inputs
+$hover-color: #0056b3; // Darker shade of blue for hover effects
+$input-border-focus: #2874f0; // Border color when inputs are focused
+
+.add-product-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  color: $primary-color;
+  margin-bottom: 20px;
+}
+
+.add-product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.input,
+.textarea,
+.file-input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+}
+
+.input:focus,
+.textarea:focus,
+select:focus {
+  border-color: $input-border-focus;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+select {
+  appearance: none;
+  background-color: #f9f9f9;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"%3E%3Cpath fill="none" stroke="%23666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2 5l6 6 6-6" /%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.file-input {
+  padding: 10px;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: $primary-color;
+  }
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-btn {
+  padding: 12px 30px;
+  background-color: $primary-color;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+.submit-btn:focus {
+  outline: none;
+}
+
+.image-preview,
+.image-previews {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.image-preview img,
+.image-previews img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.image-previews {
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .add-product-container {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .add-product-form {
+    gap: 15px;
+  }
+
+  .input,
+  .textarea,
+  select,
+  .file-input {
+    font-size: 13px;
+  }
+
+  .submit-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

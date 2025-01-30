@@ -1,0 +1,74 @@
+// Variables
+$primary-color: #2874f0;
+$primary-hover-color: #1e5ec0; // Manually calculated 10% darker shade
+$primary-active-color: #174990; // Manually calculated 15% darker shade
+$secondary-color: #ff9f00;
+$text-color: #333;
+$background-color: #f1f3f6;
+
+// Verify Email Container
+.verify-container {
+  background-color: white;
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  text-align: center;
+
+  h1 {
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+
+  form {
+    .form-group {
+      margin-bottom: 15px;
+      text-align: left;
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: $text-color;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+
+        &:focus {
+          border-color: $primary-color;
+          outline: none;
+          box-shadow: 0 0 5px rgba(40, 116, 240, 0.5);
+        }
+      }
+    }
+
+    .btn-verify {
+      width: 100%;
+      padding: 10px 15px;
+      background-color: $primary-color;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: $primary-hover-color;
+      }
+
+      &:active {
+        background-color: $primary-active-color;
+      }
+    }
+  }
+}

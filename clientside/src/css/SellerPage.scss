@@ -1,0 +1,178 @@
+.page-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+
+  .left-section {
+    flex: 3;
+    padding: 20px;
+    border-right: 1px solid #e0e0e0;
+    background-color: #ffffff;
+
+    h2 {
+      color: #333333;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #555555;
+      margin: 8px 0;
+      font-size: 14px;
+    }
+
+    .company-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .form-field {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          margin-bottom: 5px;
+          color: #555555;
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        input {
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          font-size: 14px;
+
+          &:focus {
+            outline: none;
+            border-color: #2874F0;
+            box-shadow: 0 0 4px rgba(40, 116, 240, 0.3);
+          }
+        }
+      }
+
+      .form-actions {
+        display: flex;
+        gap: 10px;
+
+        button {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 14px;
+          font-weight: bold;
+          transition: background-color 0.3s ease;
+
+          &:nth-child(1) {
+            background-color: #2874F0;
+            color: white;
+
+            &:hover {
+              background-color: #1a5fbf;
+            }
+          }
+
+          &:nth-child(2) {
+            background-color: #f1f1f1;
+            color: #333333;
+
+            &:hover {
+              background-color: #e0e0e0;
+            }
+          }
+        }
+      }
+    }
+
+    // Style for the Orders button
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      background-color: #2874F0;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        background-color: #1a5fbf;
+        transform: scale(1.05);
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+
+  .right-section {
+    flex: 7;
+    padding: 20px;
+    position: relative;
+    background-color: #f5faff;
+
+    h2 {
+      color: #333333;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 15px;
+
+      .product-box {
+        padding: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 14px;
+        color: #333333;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+
+        &:hover {
+          background-color: #eaf4ff;
+          transform: scale(1.05);
+        }
+
+        sup {
+          font-size: 12px;
+          color: #2874F0;
+        }
+      }
+    }
+
+    .add-product-button {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background-color: #2874F0;
+      color: #ffffff;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        background-color: #1a5fbf;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
